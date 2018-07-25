@@ -32,3 +32,6 @@ Value | Default | Example (Input) | Example (On) | Example (Off)
 Run tests. Requires yarn.
 
 `yarn test`
+
+## Changelog
+- `0.0.0` init commit

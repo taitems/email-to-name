@@ -2,6 +2,7 @@
   "name": "email-to-name",
   "version": "0.0.0",
   "main": "email-to-name.js",
+  "description": "A Node.js and web browser compatible script that takes an email address and tries to generate a name.",
   "devDependencies": {
     "jest": "^23.4.1"
   },
@@ -10,5 +11,13 @@
   "license": "MIT",
   "scripts": {
     "test": "jest"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taitems/email-to-name.git"
+  },
+  "bugs": {
+    "url": "https://github.com/taitems/email-to-name/issues"
+  },
+  "homepage": "https://github.com/taitems/email-to-name#readme"
 }
