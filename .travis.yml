@@ -1,6 +1,7 @@
 dist: trusty
 language: node_js
 install:
+  - npm install
   - yarn --version # yarn comes with Travis trusty images
 node_js:
   - 6
