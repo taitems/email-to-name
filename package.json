@@ -1,0 +1,14 @@
+{
+  "name": "email-to-name",
+  "version": "0.0.0",
+  "main": "email-to-name.js",
+  "devDependencies": {
+    "jest": "^23.4.1"
+  },
+  "keywords": [],
+  "author": "Tait Brown <taitbrown@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  }
+}
