@@ -1,4 +1,4 @@
-# Email to Name
+# Email to Name [![Build Status](https://travis-ci.org/taitems/email-to-name.svg?branch=master)](https://travis-ci.org/taitems/email-to-name) ![https://houndci.com](https://img.shields.io/badge/Protected_by-Hound-a873d1.svg)
 A Node.js and web browser compatible script that takes an email address and tries to generate a name.
 
 ## Company Names
