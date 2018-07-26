@@ -31,16 +31,17 @@ Value | Default | Example (Input) | Example (On) | Example (Off)
 `appendPeriodToTitlePrefix` | `true` | `prof.tait.brown@gmail.com` | `Prof. Tait Brown` | `Prof Tait Brown`
 
 ## Default Values
-**Common Personal Identifiers**
+
+#### Common Personal Identifiers
 Attempt to use the domain name as the personal identifier when these common email identifiers are used `'hello', 'me', 'email', 'contact'`
 
-**Generational Suffixes**
+#### Generational Suffixes
 Prepend a comma and append a period for the following, when at the end of a string and preceded by a space `'jr', 'jnr', 'sr', 'snr'`
 
-**Generational Numbers**
-Uppercase these when at the end of a string and preceded by a space `'ii', 'iii', 'iv'`
+#### Generational Numbers
+Uppercase these whe at the end of a string and preceded by a space `'ii', 'iii', 'iv'`
 
-**Titles**
+#### Titles
 Append a period when the following occur at the beginning of a string and are followed by a space `'mr', 'mrs', 'ms', 'dr', 'prof'`
 
 ## Development
