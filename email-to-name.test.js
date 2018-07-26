@@ -66,6 +66,78 @@ const data = [{
     input: 'john.amckim@gmail.com',
     output: 'John Amckim',
     title: 'Ignore mid sentence "mc" pattern'
+}, {
+    input: 'dr.tait.brown@gmail.com',
+    output: 'Dr. Tait Brown',
+    title: 'Handles Dr Prefix'
+}, {
+    input: 'prof.tait.brown@gmail.com',
+    output: 'Prof. Tait Brown',
+    title: 'Handles Prof Prefix'
+}, {
+    input: 'tait.brown.jnr@gmail.com',
+    output: 'Tait Brown, Jnr.',
+    title: 'Handles Junior Suffix'
+}, {
+    input: 'tait.brown.snr@gmail.com',
+    output: 'Tait Brown, Snr.',
+    title: 'Handles Senior Suffix'
+}, {
+    input: 'tait.brown.jr@gmail.com',
+    output: 'Tait Brown, Jr.',
+    title: 'Handles Junior Suffix'
+}, {
+    input: 'tait.brown.sr@gmail.com',
+    output: 'Tait Brown, Sr.',
+    title: 'Handles Senior Suffix'
+}, {
+    input: 'tait.brown.ii@gmail.com',
+    output: 'Tait Brown II',
+    title: 'Handles Name (The Second)'
+}, {
+    input: 'tait.ii.brown@gmail.com',
+    output: 'Tait Ii Brown',
+    title: 'Ignore midsentence (ii)'
+}, {
+    input: 'tait.brown.iii@gmail.com',
+    output: 'Tait Brown III',
+    title: 'Handles Name (The Third)'
+}, {
+    input: 'tait.iii.brown@gmail.com',
+    output: 'Tait Iii Brown',
+    title: 'Ignore midsentence (iii)'
+}, {
+    input: 'tait.brown.iv@gmail.com',
+    output: 'Tait Brown IV',
+    title: 'Handles Name (The Fourth)'
+}, {
+    input: 'tait.iv.brown@gmail.com',
+    output: 'Tait Iv Brown',
+    title: 'Ignore midsentence (iv)'
+}, {
+    input: 'mr.tait.brown@gmail.com',
+    output: 'Mr. Tait Brown',
+    title: 'Handle Title Period (Mr)'
+}, {
+    input: 'tait.mr.brown@gmail.com',
+    output: 'Tait Mr Brown',
+    title: 'Ignore midsentence title (Mr)'
+}, {
+    input: 'mrs.tait.brown@gmail.com',
+    output: 'Mrs. Tait Brown',
+    title: 'Handle Title Period (Mrs)'
+}, {
+    input: 'tait.mrs.brown@gmail.com',
+    output: 'Tait Mrs Brown',
+    title: 'Ignore midsentence title (Mrs)'
+}, {
+    input: 'ms.tait.brown@gmail.com',
+    output: 'Ms. Tait Brown',
+    title: 'Handle Title Period (Ms)'
+}, {
+    input: 'tait.ms.brown@gmail.com',
+    output: 'Tait Ms Brown',
+    title: 'Ignore midsentence title (Ms)'
 }];
 
 data.forEach((item) => {

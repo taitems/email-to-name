@@ -3,14 +3,20 @@
     var emailToName = (function() {
 
         var defaults = {
+            removeNumbers: true,
             removePlusWords: true,
             titleCase: true,
             caseMc: true,
             caseLetterApostrophe: true,
-            removeNumbers: true
+            uppercaseGenerationalNumbers: true,
+            commaPrependGenerationalPhrase: true,
+            appendPeriodToTitlePrefix: true,
         };
 
         var commonPersonalIdentifiers = ['hello', 'me', 'email', 'contact'];
+        var titles = ['mr', 'mrs', 'ms', 'dr', 'prof'];
+        var suffixes = ['jr', 'jnr', 'sr', 'snr'];
+        var suffixesUpper = ['ii', 'iii', 'iv'];
 
         return {
             process: process
@@ -66,6 +72,39 @@
             // `john smith` to `John Smith`
             if (settings.titleCase) {
                 output = titleCase(output);
+            }
+
+            // Handle Generational (The Third) names
+            // `John Smith Iii` to `John Smith III`
+            if (settings.uppercaseGenerationalNumbers) {
+                suffixesUpper.forEach(function(suffix) {
+                    var rx = new RegExp('\\s(' + suffix + ')$','gi');
+                    output = output.replace(rx, function(s) {
+                        return s.toUpperCase();
+                    });
+                });
+            }
+
+            // Handle 'Jr/Sr' names
+            // `John Smith Jr` to `John Smith, Jr.`
+            if (settings.commaPrependGenerationalPhrase) {
+                suffixes.forEach(function(suffix) {
+                    var rx = new RegExp('\\s(' + suffix + ')$','gi');
+                    output = output.replace(rx, function(s) {
+                        return ',' + s + '.';
+                    });
+                });
+            }
+
+            // Handle title prefixes names
+            // `Dr John Smith` to `Dr. John Smith`
+            if (settings.appendPeriodToTitlePrefix) {
+                titles.forEach(function(prefix) {
+                    var rx = new RegExp('^(' + prefix + ')\\s','gi');
+                    output = output.replace(rx, function(s) {
+                        return s.replace(' ', '. ');
+                    });
+                });
             }
 
             // Handle 'Mc' names
