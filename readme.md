@@ -1,6 +1,8 @@
 # Email to Name [![Build Status](https://travis-ci.org/taitems/email-to-name.svg?branch=master)](https://travis-ci.org/taitems/email-to-name) [![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)
 A Node.js and web browser compatible script that takes an email address and tries to generate a name.
 
+![image](https://i.imgur.com/dgshroz.png)
+
 ## Company Names
 Privacy conscious individuals often use the name of website as the email identifier. If Jane Smith has her own domain name with an email server, she might sign up as `suspiciouswebsite@janesmith.com`. That way if "Suspicious Website" ends up selling her email address on to a third party, if they send this exact email address spam, it's possible to see who leaked her email address.
 
