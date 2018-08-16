@@ -53,5 +53,6 @@ Run tests. Requires yarn.
 `yarn test`
 
 ## Changelog
+- `0.2.0` **Bugfix:** Couldn't use in browser due to `module` check
 - `0.1.0` added generational handling (Jr, Sr, III etc) as well as titles (Mr, Mrs, Dr, Prof)
 - `0.0.0` init commit
