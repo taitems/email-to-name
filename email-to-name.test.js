@@ -138,10 +138,73 @@ const data = [{
     input: 'tait.ms.brown@gmail.com',
     output: 'Tait Ms Brown',
     title: 'Ignore midsentence title (Ms)'
+}, {
+    input: 'tait.brown@gmail.com',
+    output: 'tait brown',
+    params: {
+        titleCase: false
+    },
+    title: 'Setting: Leave numbers in'
+}, {
+    input: 'dr.tait.brown@gmail.com',
+    output: 'Dr Tait Brown',
+    params: {
+        appendPeriodToTitlePrefix: false
+    },
+    title: 'Setting: Don\'t apply a period after titles (Dr/Prof etc)'
+}, {
+    input: 'tait.mcbrown@gmail.com',
+    output: 'Tait Mcbrown',
+    params: {
+        caseMc: false
+    },
+    title: 'Setting: Don\'t uppercase letter following "Mc"'
+}, {
+    input: 'tait.o\'connor@gmail.com',
+    output: 'Tait O\'connor',
+    params: {
+        caseLetterApostrophe: false
+    },
+    title: 'Setting: Don\'t uppercase letter following "O\'"'
+}, {
+    input: 'tait.brown.iii@gmail.com',
+    output: 'Tait Brown Iii',
+    params: {
+        uppercaseGenerationalNumbers: false
+    },
+    title: 'Setting: Don\'t uppercase generational number'
+}, {
+    input: 'tait.brown.jr@gmail.com',
+    output: 'Tait Brown Jr',
+    params: {
+        commaPrependGenerationalPhrase: false
+    },
+    title: 'Setting: Don\'t comma prepend Jr/Snr generational titles'
+}, {
+    input: 'tait.brown123@gmail.com',
+    output: 'Tait Brown123',
+    params: {
+        removeNumbers: false
+    },
+    title: 'Setting: Leave numbers in'
+}, {
+    input: 'tait.brown+test@gmail.com',
+    output: 'Tait Brown+test',
+    params: {
+        removePlusWords: false
+    },
+    title: 'Setting: Leave plus words in'
+}, {
+    input: 'tait.brown+test123@gmail.com',
+    output: 'Tait Brown+test',
+    params: {
+        removePlusWords: false
+    },
+    title: 'Setting: Leave plus words in (param) but remove numbers (default)'
 }];
 
 data.forEach((item) => {
     test(item.title, () => {
-        expect(emailToName.process(item.input, companyNames)).toBe(item.output);    
+        expect(emailToName.process(item.input, companyNames, item.params)).toBe(item.output);    
     })
 })
