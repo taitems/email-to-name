@@ -11,9 +11,11 @@
             uppercaseGenerationalNumbers: true,
             commaPrependGenerationalPhrase: true,
             appendPeriodToTitlePrefix: true,
+            commonPersonalIdentifiers: ['hello', 'me', 'email', 'contact'],
+            reverseCommonEmailAddresses: true,
+            companyNames: [],
         };
 
-        var commonPersonalIdentifiers = ['hello', 'me', 'email', 'contact'];
         var titles = ['mr', 'mrs', 'ms', 'dr', 'prof'];
         var suffixes = ['jr', 'jnr', 'sr', 'snr'];
         var suffixesUpper = ['ii', 'iii', 'iv'];
@@ -24,23 +26,28 @@
 
         //////////////////
 
-        function process(str, companyNames, params) {
+        function process(str, params) {
+
+            var output = '';
 
             // TODO: Preprocess?
             var settings = Object.assign({}, defaults, params);
 
             // Is the email address identified a common "hello" type string?
-            var identifierIsCommon = matchIdentifierToList(str, commonPersonalIdentifiers);
+            var identifierIsCommon = matchIdentifierToList(str, settings.commonPersonalIdentifiers);
 
             // Is the email address from someone with a personal domain?
             // Checks email address for company name as the identifier
-            var domainIsIdentifier = matchIdentifierToList(str, companyNames);
+            var domainIsIdentifier = matchIdentifierToList(str, settings.companyNames);
 
             // Get the true identifier
             // -> `companyname@personaldomain.com`. to `personaldomain`
             // -> `john.smith@gmail.com` to `john.smith`
-            var output = (identifierIsCommon || domainIsIdentifier) ? reverseDomainAndIdentifier(str) : str.split('@')[0];
-
+            if (settings.reverseCommonEmailAddresses && (identifierIsCommon || domainIsIdentifier)) {
+                output = reverseDomainAndIdentifier(str);
+            } else {
+                output = str.split('@')[0];
+            }
 
             // Drop everything after the '+'
             // `john.smith+test` to `john.smith`

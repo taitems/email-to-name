@@ -13,7 +13,7 @@ It's also therefore possible to invert this method and detect the personal domai
   - Output: `Acloudguru`
 
 **With Company Names**
-- `emailToName.process('acloudguru@janesmith.com', ['acg', 'acloudguru'])`
+- `emailToName.process('acloudguru@janesmith.com', { companyNames: ['acg', 'acloudguru'] })`
   - Output: `Janesmith`
 
 ## Common Email Identifiers
@@ -53,6 +53,7 @@ Run tests. Requires yarn.
 `yarn test`
 
 ## Changelog
+- `1.0.0` **Breaking Change:** Couldn't use in browser due to `module` check
 - `0.2.0` **Bugfix:** Couldn't use in browser due to `module` check
 - `0.1.0` added generational handling (Jr, Sr, III etc) as well as titles (Mr, Mrs, Dr, Prof)
 - `0.0.0` init commit
