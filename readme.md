@@ -31,6 +31,7 @@ Value | Default | Example (Input) | Example (On) | Example (Off)
 `uppercaseGenerationalNumbers` | `true` | `tait.brown.iii@gmail.com` | `Tait Brown III` | `Tait Brown Iii`
 `commaPrependGenerationalPhrase` | `true` | `tait.brown.jr@gmail.com` | `Tait Brown, Jr.` | `Tait Brown Jr`
 `appendPeriodToTitlePrefix` | `true` | `prof.tait.brown@gmail.com` | `Prof. Tait Brown` | `Prof Tait Brown`
+`lowercaseFamilyParticle` | `true` | `dutch.van.der.linde@gmail.com` | `Dutch van der Linde` | `Dutch Van Der Linde`
 
 ## Default Values
 
@@ -53,6 +54,8 @@ Run tests. Requires yarn.
 `yarn test`
 
 ## Changelog
+- `1.1.0` - Borrowed heavily from `namecase` libraries
+  - **ADDED:** Various lowercase conjunctions "son/daughter of" as per namecase
 - `1.0.0` **Breaking Change:** Relocated company names and common personal identifiers to `params`
 - `0.2.0` **Bugfix:** Couldn't use in browser due to `module` check
 - `0.1.0` added generational handling (Jr, Sr, III etc) as well as titles (Mr, Mrs, Dr, Prof)

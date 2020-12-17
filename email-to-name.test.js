@@ -115,6 +115,18 @@ const data = [{
     output: 'John McKim',
     title: 'Handle "Mc" Case'
 }, {
+    input: 'john.macdonald@gmail.com',
+    output: 'John Macdonald',
+    title: 'Handle "Mc" Case'
+}, {
+    input: 'john.mcdonald@gmail.com',
+    output: 'John McDonald',
+    title: 'Handle "Mc" Case'
+}, {
+    input: 'john.mackie@gmail.com',
+    output: 'John Mackie',
+    title: 'Handle "Mc" Case (Exception)'
+}, {
     input: 'john.amckim@gmail.com',
     output: 'John Amckim',
     title: ' -> Nuance: Ignore mid sentence "mc" pattern'
@@ -205,6 +217,21 @@ const data = [{
     output: 'Tait Ms Brown',
     title: 'Ignore midsentence title (Ms)'
 }, {
+    input: 'dutch.van.der.linde@gmail.com',
+    output: 'Dutch van der Linde',
+    title: 'Family particle (van der)'
+}, {
+    input: 'dutch.van.der.linde@gmail.com',
+    output: 'Dutch Van Der Linde',
+    title: ' -> Reverse Setting: Don\'t lowercase family particle',
+    params: {
+        lowercaseFamilyParticle: false
+    },
+}, {
+    input: 'ludwig.van.beethoven@gmail.com',
+    output: 'Ludwig van Beethoven',
+    title: 'Family particle (van)'
+}, {
     input: 'tait.brown@gmail.com',
     output: 'tait brown',
     params: {
@@ -243,6 +270,6 @@ const data = [{
 
 data.forEach((item) => {
     test(item.title, () => {
-        expect(emailToName.process(item.input, item.params)).toBe(item.output);    
+        expect(emailToName.process(item.input, item.params)).toBe(item.output);
     })
 })
