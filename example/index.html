@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <script src="../email-to-name.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <a>tait.brown+nospam@gmail.com</a>
+        </li>
+        <li>
+            <a>tait.brown.iii@gmail.com</a>
+        </li>
+        <li>
+            <a>tait.brown.jr@gmail.com</a>
+        </li>
+    </ul>
+    <form>
+        <input type="email" value="tait.brown@gmail.com" /><button type="submit">Convert to Name</button>
+    </form>
+    <div id="output"></div>
+</body>
+<script>
+    $(function () {
+        const $input = $('input[type=email]');
+        const $output = $('#output');
+        const $form = $('form');
+        $('li a').on('click', e => {
+            $input.val($(e.target).text());
+            $form.submit();
+            e.preventDefault();
+        });
+        $form.on('submit', e => {
+            console.log(emailToName.process($input.val()))
+            e.preventDefault();
+        });
+    });
+</script>
+
+</html>
