@@ -1,4 +1,4 @@
-const emailToName = require('./email-to-name.js');
+const emailToName = require('./email-to-name');
 
 const companyNames = ['acloudguru', 'acg'];
 

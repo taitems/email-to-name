@@ -1,17 +1,21 @@
 {
   "name": "email-to-name",
   "version": "1.1.1",
-  "engines" : { "node" : ">=6" },
+  "engines": {
+    "node": ">=6"
+  },
   "main": "email-to-name.js",
   "description": "A Node.js and web browser compatible script that takes an email address and tries to generate a name.",
   "devDependencies": {
+    "esbuild": "^0.8.34",
     "jest": "^23.4.1"
   },
   "keywords": [],
   "author": "Tait Brown <taitbrown@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "esbuild src/email-to-name.js --minify --sourcemap --target=chrome58,firefox57,safari11,edge16 --outfile=dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/taitems/email-to-name/issues"
   },
-  "homepage": "https://github.com/taitems/email-to-name#readme"
+  "homepage": "https://github.com/taitems/email-to-name#readme",
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1"
+  }
 }
