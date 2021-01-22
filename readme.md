@@ -1,4 +1,5 @@
-# Email to Name [![Build Status](https://travis-ci.org/taitems/email-to-name.svg?branch=master)](https://travis-ci.org/taitems/email-to-name) ![npm](https://img.shields.io/npm/dw/email-to-name) [![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)
+ [![Build Status](https://travis-ci.org/taitems/email-to-name.svg?branch=master)](https://travis-ci.org/taitems/email-to-name) ![npm](https://img.shields.io/npm/dw/email-to-name) ![npm bundle size](https://img.shields.io/bundlephobia/min/email-to-name) ![npm](https://img.shields.io/npm/v/email-to-name)
+ # Email to Name
 A Node.js and web browser compatible script that takes an email address and tries to generate a name.
 
 ![image](https://i.imgur.com/dgshroz.png)
@@ -54,6 +55,7 @@ Run tests. Requires yarn.
 `yarn test`
 
 ## Changelog
+- `2.0.0` - Building with `esbuild` with browser targets `chrome58,firefox57,safari11,edge16`
 - `1.1.0` - Borrowed heavily from `namecase` libraries
   - **ADDED:** Various lowercase conjunctions "son/daughter of" as per namecase
 - `1.0.0` **Breaking Change:** Relocated company names and common personal identifiers to `params`
