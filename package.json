@@ -25,7 +25,5 @@
     "url": "https://github.com/taitems/email-to-name/issues"
   },
   "homepage": "https://github.com/taitems/email-to-name#readme",
-  "dependencies": {
-    "@babel/polyfill": "^7.12.1"
-  }
+  "dependencies": {}
 }
