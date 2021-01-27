@@ -1,6 +1,6 @@
 {
   "name": "email-to-name",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "engines": {
     "node": ">=10.16.0"
   },
