@@ -4,4 +4,4 @@ install:
   - npm install
   - yarn --version # yarn comes with Travis trusty images
 node_js:
-  - 6
+  - 10.16.0
