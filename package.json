@@ -2,13 +2,13 @@
   "name": "email-to-name",
   "version": "2.0.1",
   "engines": {
-    "node": ">=8"
+    "node": ">=6"
   },
   "main": "email-to-name.js",
   "description": "A Node.js and web browser compatible script that takes an email address and tries to generate a name.",
   "devDependencies": {
     "esbuild": "^0.8.34",
-    "jest": "^23.4.1"
+    "jest": "26"
   },
   "keywords": [],
   "author": "Tait Brown <taitbrown@gmail.com>",
