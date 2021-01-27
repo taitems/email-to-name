@@ -2,5 +2,10 @@ node_modules/
 src/
 .gitignore
 .tool-versions
-.editorconfig
 yarn.lock
+
+#editor settings
+.editorconfig
+
+#build tools
+.travis.yml
