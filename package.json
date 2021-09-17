@@ -1,10 +1,10 @@
 {
   "name": "email-to-name",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "engines": {
     "node": ">=10.16.0"
   },
-  "main": "email-to-name.js",
+  "main": "index.js",
   "description": "A Node.js and web browser compatible script that takes an email address and tries to generate a name.",
   "devDependencies": {
     "esbuild": "^0.8.34",
