@@ -10,7 +10,7 @@ const emailToName = (function () {
         commaPrependGenerationalPhrase: true,
         appendPeriodToTitlePrefix: true,
         lowercaseFamilyParticle: true,
-        commonPersonalIdentifiers: ['hello', 'me', 'email', 'contact'],
+        commonPersonalIdentifiers: ['hello', 'hi', 'me', 'email', 'contact'],
         reverseCommonEmailAddresses: true,
         companyNames: [],
     };
