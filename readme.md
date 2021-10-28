@@ -1,4 +1,6 @@
- [![Build Status](https://travis-ci.org/taitems/email-to-name.svg?branch=master)](https://travis-ci.org/taitems/email-to-name) ![npm](https://img.shields.io/npm/dw/email-to-name) ![npm bundle size](https://img.shields.io/bundlephobia/min/email-to-name) ![npm](https://img.shields.io/npm/v/email-to-name)
+![npm](https://img.shields.io/npm/dw/email-to-name)
+![npm bundle size](https://img.shields.io/bundlephobia/min/email-to-name)
+![npm](https://img.shields.io/npm/v/email-to-name)
  # Email to Name
 A Node.js and web browser compatible script that takes an email address and tries to generate a name.
 
