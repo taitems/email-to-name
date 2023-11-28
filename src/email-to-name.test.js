@@ -19,6 +19,14 @@ const data = [{
     output: 'Tait O\'Connor',
     title: 'Handle O\'Connor case'
 }, {
+    input: 'contact',
+    output: 'Contact',
+    title: 'Handle not an email yet'
+}, {
+    input: 'tait',
+    output: 'Tait',
+    title: 'Handle not an email'
+}, {
     input: 'tait.o\'connor@gmail.com',
     output: 'Tait O\'connor',
     params: {

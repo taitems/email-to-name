@@ -41,7 +41,7 @@ const emailToName = (function () {
         // Get the true identifier
         // -> `companyname@personaldomain.com`. to `personaldomain`
         // -> `john.smith@gmail.com` to `john.smith`
-        if (settings.reverseCommonEmailAddresses && (identifierIsCommon || domainIsIdentifier)) {
+        if (settings.reverseCommonEmailAddresses && (identifierIsCommon || domainIsIdentifier) && str.indexOf('@') > -1) {
             output = reverseDomainAndIdentifier(str);
         } else {
             output = str.split('@')[0];
@@ -152,9 +152,9 @@ const emailToName = (function () {
         if (!identifiers || !identifiers.length) {
             return false;
         }
-        var identifier = str.split('@')[0];
-        var match = false;
-        for (var i = 0; i < identifiers.length; i++) {
+        const identifier = str.split('@')[0];
+        let match = false;
+        for (let i = 0; i < identifiers.length; i++) {
             if (identifier === identifiers[i]) {
                 match = true;
                 break;
@@ -164,8 +164,8 @@ const emailToName = (function () {
     }
 
     function reverseDomainAndIdentifier(str) {
-        var provider = str.split('@')[1];
-        var host = provider.split('.')[0];
+        const provider = str.split('@')[1];
+        const host = provider.split('.')[0];
         return host;
     }
 
