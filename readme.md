@@ -1,5 +1,4 @@
-![Build Status](https://img.shields.io/github/workflow/status/taitems/email-to-name/Tests/master)
-![npm](https://img.shields.io/npm/dw/email-to-name)
+[![Tests](https://github.com/taitems/email-to-name/actions/workflows/actions.yml/badge.svg)](https://github.com/taitems/email-to-name/actions/workflows/actions.yml)
 ![npm bundle size](https://img.shields.io/bundlephobia/min/email-to-name)
 ![npm](https://img.shields.io/npm/v/email-to-name)
  # Email to Name

@@ -2,7 +2,7 @@
   "name": "email-to-name",
   "version": "2.0.5",
   "engines": {
-    "node": ">=10.16.0"
+    "node": ">=16"
   },
   "main": "index.js",
   "description": "A Node.js and web browser compatible script that takes an email address and tries to generate a name.",
