@@ -5,6 +5,7 @@
     "node": ">=16"
   },
   "main": "index.js",
+  "types": "types/index.d.ts",
   "description": "A Node.js and web browser compatible script that takes an email address and tries to generate a name.",
   "devDependencies": {
     "esbuild": "^0.19.8",
@@ -15,7 +16,7 @@
   "license": "MIT",
   "scripts": {
     "test": "jest --coverage",
-    "build": "esbuild src/email-to-name.js --minify --sourcemap --target=chrome58,firefox57,safari11,edge16 --outfile=dist/index.js",
+    "build": "esbuild src/email-to-name.js --minify --sourcemap --target=chrome58,firefox57,safari11,edge16 --outfile=dist/index.js && cp types/index.d.ts dist/",
     "release": "npm run build && npm publish"
   },
   "repository": {
