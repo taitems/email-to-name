@@ -179,3 +179,4 @@ const emailToName = (function () {
 }());
 
 module.exports = emailToName;
+module.exports.default = emailToName;
